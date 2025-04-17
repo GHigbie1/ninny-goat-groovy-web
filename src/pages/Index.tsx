@@ -53,7 +53,7 @@ const Index = () => {
           </div>
           <div className={`${fadeInClass('home')} transform rotate-6`}>
             <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-xl">
-              <img alt="Vintage vinyl records" className="w-full h-full object-cover" src="/lovable-uploads/7af1e18b-b699-457f-8461-98bec3951eb4.png" />
+              <img alt="Vintage vinyl records" className="w-full h-full object-cover" src="/lovable-uploads/f8a25f50-412a-4b92-9b9a-042bc5274479.jpg" />
             </div>
           </div>
         </div>
