@@ -4,12 +4,23 @@ import React from 'react';
 interface BlogCardProps {
   title: string;
   description: string;
+  image?: string;
+  date?: string;
+  author?: string;
 }
 
-const BlogCard = ({ title, description }: BlogCardProps) => {
+const BlogCard = ({ title, description, image, date = "June 15, 2023", author = "Ninny Goat Team" }: BlogCardProps) => {
   return (
     <article className="bg-ninny-cashmere rounded-3xl shadow-md p-8 transition-all hover:translate-y-[-6px] hover:shadow-xl">
-      <h3 className="text-ninny-water text-xl mb-2">{title}</h3>
+      {image && (
+        <div className="mb-4 rounded-xl overflow-hidden">
+          <img src={image} alt={title} className="w-full h-48 object-cover" />
+        </div>
+      )}
+      <div className="mb-2 text-ninny-mandarin text-sm">
+        <span>{date}</span> • <span>{author}</span>
+      </div>
+      <h3 className="text-ninny-water text-xl font-funkydori uppercase mb-2">{title}</h3>
       <p className="text-ninny-raspberry mb-4">{description}</p>
       <a href="#" className="text-ninny-mandarin font-bold hover:underline flex items-center gap-1">
         Read

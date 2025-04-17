@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -62,7 +63,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* SWAPPED: Our Mission Section is now before Products Intro */}
       <section id="mission" className="py-24 bg-ninny-cashmere/60 relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <h2 className={`text-center text-4xl font-funkydori text-ninny-raspberry mb-16 ${fadeInClass('mission')}`}>
@@ -78,7 +79,7 @@ const Index = () => {
                   <path d="m17 9 4 2v12l-4-2V9z" />
                 </svg>
               </div>
-              <h3 className="text-ninny-water text-xl mb-2">Elevating the Standard</h3>
+              <h3 className="text-ninny-water text-xl font-funkydori uppercase mb-2">Elevating the Standard</h3>
               <p className="text-ninny-strawberry">
                 We source the highest quality cannabis products, carefully curated for a premium experience that takes you back to the golden era.
               </p>
@@ -93,7 +94,7 @@ const Index = () => {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
               </div>
-              <h3 className="text-ninny-water text-xl mb-2">Promoting Inclusivity</h3>
+              <h3 className="text-ninny-water text-xl font-funkydori uppercase mb-2">Promoting Inclusivity</h3>
               <p className="text-ninny-strawberry">
                 Our dispensary welcomes everyone, creating a safe and accepting space for cannabis enthusiasts from all walks of life.
               </p>
@@ -106,7 +107,7 @@ const Index = () => {
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                 </svg>
               </div>
-              <h3 className="text-ninny-water text-xl mb-2">Educating and Empowering</h3>
+              <h3 className="text-ninny-water text-xl font-funkydori uppercase mb-2">Educating and Empowering</h3>
               <p className="text-ninny-strawberry">
                 We believe in empowering our customers through education, providing comprehensive information about our products and their benefits.
               </p>
@@ -119,7 +120,7 @@ const Index = () => {
       <section className="py-24 bg-ninny-water text-ninny-cashmere relative" id="products-intro">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div className={`${fadeInClass('products-intro')}`}>
-            <h2 className="text-4xl font-funkydori mb-6">Immerse Yourself in a Groovy Cannabis Culture</h2>
+            <h2 className="text-4xl font-funkydori uppercase mb-6">Immerse Yourself in a Groovy Cannabis Culture</h2>
             <p className="mb-6 text-lg">
               Founded by true cannabis enthusiasts, our dispensary exudes a passion for the plant and a commitment to creating a haven for like-minded individuals who dig the good vibes.
             </p>
@@ -138,10 +139,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Shop Section */}
+      {/* SWAPPED: Shop Section now comes after Products Intro */}
       <section id="shop" className="py-24 relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h2 className={`text-center text-4xl font-funkydori text-ninny-raspberry mb-16 ${fadeInClass('shop')}`}>
+          <h2 className={`text-center text-4xl font-funkydori uppercase text-ninny-raspberry mb-16 ${fadeInClass('shop')}`}>
             Far Out Products
           </h2>
           
@@ -188,17 +189,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
+      {/* Blog Section - Updated with actual content */}
       <section id="blog" className="py-24 bg-ninny-cashmere/60 relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h2 className={`text-center text-4xl font-funkydori text-ninny-raspberry mb-16 ${fadeInClass('blog')}`}>
+          <h2 className={`text-center text-4xl font-funkydori uppercase text-ninny-raspberry mb-16 ${fadeInClass('blog')}`}>
             Blog
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <BlogCard title="Far Out Growing Tips" description="Dig these funky cultivation methods that'll give your garden those righteous vibrations and produce some dynamite results!" />
-            <BlogCard title="Groovy Cannabis Culture" description="Take a trip back to the 70s and explore how cannabis shaped the counterculture movement that's still rockin' our world today!" />
-            <BlogCard title="Peace & Pot Pairings" description="Get down with our outta sight strain recommendations to pair with those classic vinyl records for the ultimate cosmic experience!" />
+            <BlogCard 
+              title="The Lost Vinyl Connection" 
+              description="Discover how the vinyl revival mirrors cannabis culture's appreciation for ritual, quality, and mindful enjoyment. We explore the perfect album pairings for different strains." 
+              date="April 15, 2023"
+              author="DJ Mellow"
+              image="/lovable-uploads/f8a25f50-412a-4b92-9b9a-042bc5274479.jpg"
+            />
+            
+            <BlogCard 
+              title="Growing Your Own Groove" 
+              description="Our step-by-step guide to home cultivation brings the 70s homesteading ethos to your cannabis garden. Learn sustainable practices that honor the plant and the planet." 
+              date="May 22, 2023"
+              author="Farmer Jane"
+              image="/lovable-uploads/12b24b3f-b3f2-4982-b7ac-bb7f1d7f2ef0.jpg"
+            />
+            
+            <BlogCard 
+              title="The Science of Psychedelic Art" 
+              description="Explore how cannabis influences visual perception and why 70s psychedelic art continues to resonate with today's cannabis culture. A deep dive into consciousness and creativity." 
+              date="June 10, 2023"
+              author="Professor Groovy"
+              image="/lovable-uploads/14e78d84-ece6-4857-b5a2-834aa95aaee7.png"
+            />
           </div>
           
           <div className="text-center mt-12">
@@ -210,7 +231,7 @@ const Index = () => {
       {/* Newsletter Section */}
       <section id="newsletter" className="py-24 relative">
         <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
-          <h2 className={`text-4xl font-funkydori text-ninny-water mb-8 ${fadeInClass('newsletter')}`}>
+          <h2 className={`text-4xl font-funkydori uppercase text-ninny-water mb-8 ${fadeInClass('newsletter')}`}>
             Join the Dispo Disco!
           </h2>
           <p className={`text-ninny-raspberry mb-8 ${fadeInClass('newsletter')}`}>
