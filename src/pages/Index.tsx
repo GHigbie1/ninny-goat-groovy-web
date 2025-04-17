@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -45,7 +44,7 @@ const Index = () => {
       <section id="home" className="min-h-screen flex items-center py-20 relative">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center relative z-10">
           <div className={`${fadeInClass('home')} space-y-6`}>
-            <h1 className="text-[clamp(2.7rem,5vw+1rem,6rem)] leading-none text-ninny-raspberry" style={{ fontFamily: 'Pacifico, Monoton, cursive' }}>
+            <h1 className="text-[clamp(2.7rem,5vw+1rem,6rem)] leading-none text-ninny-raspberry">
               Vintage 70s Records
             </h1>
             <p className="text-xl text-ninny-raspberry max-w-lg">

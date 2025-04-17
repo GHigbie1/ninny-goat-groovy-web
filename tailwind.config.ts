@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -76,7 +75,9 @@ export default {
 			},
 			fontFamily: {
 				'funkydori': ['Funkydori', 'sans-serif'],
-				'body': ['Inter', 'Helvetica', 'Arial', 'sans-serif']
+				'body': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+				'genty': ['Genty', 'sans-serif'],
+				'loubag': ['Loubag', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
