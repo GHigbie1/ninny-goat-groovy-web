@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import GroovyLines from '@/components/GroovyLines';
 import ProductCard from '@/components/ProductCard';
 import BlogCard from '@/components/BlogCard';
+
 const Index = () => {
   const [visible, setVisible] = useState<Record<string, boolean>>({});
 
@@ -31,7 +32,9 @@ const Index = () => {
       });
     };
   }, []);
+
   const fadeInClass = (id: string) => visible[id] ? 'opacity-100 translate-y-0 transition-all duration-1000' : 'opacity-0 translate-y-10 transition-all duration-1000';
+
   return <>
       <Header />
       
@@ -86,7 +89,7 @@ const Index = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-ninny-cashmere" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M23 21v-2a4 4 0 0 1 0 7.75" />
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
               </div>
@@ -143,48 +146,40 @@ const Index = () => {
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-16">
-            <ProductCard title="Flower" description="Premium cannabis strains with that vintage quality" iconBg="bg-ninny-marigold">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-ninny-cashmere" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M12 10c.64.64.64 1.509 0 2.148-.728.672-1.996.672-2.725 0-.73-.639-.73-1.51 0-2.148.729-.672 1.997-.672 2.725 0z" />
-                <path d="M18 15c-1.195 1.195-3.75.697-5.748-1.111-.687-.1-1.404-.032-2.015.579L8.82 15.58c-.483.483-.483 1.447 0 1.93.483.483 1.447.483 1.93 0 .61-.61.678-1.327.579-2.015 1.808-1.997 2.306-4.553 1.11-5.748-1.194-1.194-3.75-.697-5.747 1.111-.687.1-1.404.032-2.015-.579L3.564 8.166c-.483-.483-.483-1.447 0-1.93.483-.483 1.447-.483 1.93 0 .61.61.678 1.327.579 2.015 1.808 1.997 2.306 4.553 1.11 5.748-1.194 1.194-3.75.697-5.747-1.111-.687-.1-1.404-.032-2.015.579" />
-              </svg>
-            </ProductCard>
+            <ProductCard 
+              title="Flower" 
+              description="Premium cannabis strains with that vintage quality" 
+              iconBg="bg-ninny-marigold"
+              iconSrc="/lovable-uploads/7c74c706-1102-43a2-bcd2-fe521ab66c26.png"
+            />
             
-            <ProductCard title="Edibles" description="Groovy treats that'll take you back to the 70s" iconBg="bg-ninny-water">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-ninny-cashmere" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="m2 12 10 9 10-9" />
-                <path d="m2 6 10 9 10-9" />
-              </svg>
-            </ProductCard>
+            <ProductCard 
+              title="Edibles" 
+              description="Groovy treats that'll take you back to the 70s" 
+              iconBg="bg-ninny-water"
+              iconSrc="/lovable-uploads/83c3b308-127f-46bd-9eb6-ef6d0bc17530.png"
+            />
             
-            <ProductCard title="Vapes" description="Modern tech with retro style for easy enjoyment" iconBg="bg-ninny-marigold">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-ninny-cashmere" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M3 3V19.5"></path>
-                <path d="M7.5 3v18"></path>
-                <path d="M3 7.5h4.5"></path>
-                <path d="M3 15h4.5"></path>
-                <path d="M13.5 3v18"></path>
-                <path d="M18 3v18"></path>
-                <path d="M10.5 7.5h10.5"></path>
-                <path d="M10.5 15h10.5"></path>
-              </svg>
-            </ProductCard>
+            <ProductCard 
+              title="Vapes" 
+              description="Modern tech with retro style for easy enjoyment" 
+              iconBg="bg-ninny-marigold"
+              iconSrc="/lovable-uploads/a4cce5bd-dbfa-4a79-a948-7f3df095317b.png"
+            />
             
-            <ProductCard title="Concentrates" description="Powerful extracts with that pure 70s euphoria" iconBg="bg-ninny-raspberry">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-ninny-cashmere" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                <path d="M3 6h18" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
-              </svg>
-            </ProductCard>
+            <ProductCard 
+              title="Concentrates" 
+              description="Powerful extracts with that pure 70s euphoria" 
+              iconBg="bg-ninny-raspberry"
+              iconSrc="/lovable-uploads/c41c7e6b-9ba9-4bdd-8a73-09481cf54775.png"
+            />
             
-            <ProductCard title="Accessories" description="Tools and gear with vintage-inspired designs" iconBg="bg-ninny-mandarin">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-ninny-cashmere" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                <path d="M3 6h18" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
-              </svg>
-            </ProductCard>
+            <ProductCard 
+              title="Accessories" 
+              description="Tools and gear with vintage-inspired designs" 
+              iconBg="bg-ninny-mandarin"
+              iconSrc="/lovable-uploads/6eada197-f35a-46b0-aeb3-ddd7b4588e7b.png"
+            />
           </div>
           
           <div className="text-center">
@@ -234,4 +229,5 @@ const Index = () => {
       <Footer />
     </>;
 };
+
 export default Index;
