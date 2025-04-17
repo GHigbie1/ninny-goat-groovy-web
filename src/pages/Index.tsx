@@ -129,7 +129,7 @@ const Index = () => {
           </div>
           <div className={`${fadeInClass('products-intro')}`}>
             <div className="aspect-[4/3] overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%]">
-              <img src="https://source.unsplash.com/random/800x600?70s,interior" alt="70s inspired interior" className="w-full h-full object-cover" />
+              <img alt="70s inspired interior" className="w-full h-full object-cover" src="/lovable-uploads/12b24b3f-b3f2-4982-b7ac-bb7f1d7f2ef0.jpg" />
             </div>
           </div>
         </div>
