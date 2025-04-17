@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Ninny Goat theme colors
+				ninny: {
+					raspberry: '#7E1836',
+					mandarin: '#EC7338',
+					marigold: '#F8B832',
+					strawberry: '#C22328',
+					water: '#0F7776',
+					cashmere: '#FDFBE2',
+					ebony: '#000000'
 				}
+			},
+			fontFamily: {
+				'funkydori': ['Funkydori', 'sans-serif'],
+				'body': ['Inter', 'Helvetica', 'Arial', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +99,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'wiggle': {
+					'0%': { transform: 'rotate(-5deg)' },
+					'100%': { transform: 'rotate(5deg)' }
+				},
+				'dash': {
+					to: { strokeDashoffset: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'wiggle': 'wiggle .35s ease-in-out infinite alternate',
+				'draw': 'dash 6s ease-out forwards'
 			}
 		}
 	},
