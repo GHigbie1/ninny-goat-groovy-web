@@ -7,9 +7,10 @@ interface BlogCardProps {
   image?: string;
   date?: string;
   author?: string;
+  link?: string;
 }
 
-const BlogCard = ({ title, description, image, date = "June 15, 2023", author = "Ninny Goat Team" }: BlogCardProps) => {
+const BlogCard = ({ title, description, image, date = "June 15, 2023", author = "Ninny Goat Team", link = "#" }: BlogCardProps) => {
   return (
     <article className="bg-ninny-cashmere rounded-3xl shadow-md p-8 transition-all hover:translate-y-[-6px] hover:shadow-xl">
       {image && (
@@ -22,7 +23,7 @@ const BlogCard = ({ title, description, image, date = "June 15, 2023", author = 
       </div>
       <h3 className="text-ninny-water text-xl font-funkydori uppercase mb-2">{title}</h3>
       <p className="text-ninny-raspberry mb-4">{description}</p>
-      <a href="#" className="text-ninny-mandarin font-bold hover:underline flex items-center gap-1">
+      <a href={link} className="text-ninny-mandarin font-bold hover:underline flex items-center gap-1">
         Read
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="m9 18 6-6-6-6"/>

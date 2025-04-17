@@ -7,9 +7,10 @@ interface ProductCardProps {
   iconBg: string;
   iconSrc?: string;
   children?: React.ReactNode;
+  link?: string;
 }
 
-const ProductCard = ({ title, description, iconBg, iconSrc, children }: ProductCardProps) => {
+const ProductCard = ({ title, description, iconBg, iconSrc, children, link = "#" }: ProductCardProps) => {
   return (
     <article className="product-card">
       <div className={`w-20 h-20 ${iconBg} rounded-full flex items-center justify-center mb-4 overflow-hidden`}>
@@ -23,9 +24,9 @@ const ProductCard = ({ title, description, iconBg, iconSrc, children }: ProductC
           children
         )}
       </div>
-      <h3 className="text-ninny-water text-xl font-funkydori uppercase mb-2">{title}</h3>
+      <h3 className="text-ninny-water text-xl uppercase mb-2" style={{ fontFamily: 'Pacifico, Monoton, cursive' }}>{title}</h3>
       <p className="text-ninny-raspberry mb-4">{description}</p>
-      <a href="#" className="text-ninny-mandarin font-bold hover:underline">Explore</a>
+      <a href={link} className="text-ninny-mandarin font-bold hover:underline">Explore</a>
     </article>
   );
 };
