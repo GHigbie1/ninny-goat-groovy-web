@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,8 +11,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-ninny-marigold text-xl font-bold font-funkydori">+ Ninny Goat & Co.</h3>
             <p className="text-sm opacity-80">
-              123 Groovy Street<br />
-              Funkytown, USA 12345<br />
+              512 US-5<br />
+              Fairlee, VT 05045<br />
               (555) 123-4567
             </p>
             <p className="text-xs opacity-60">
@@ -101,3 +102,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
