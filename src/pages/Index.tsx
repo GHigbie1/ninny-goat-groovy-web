@@ -97,7 +97,7 @@ const Index = () => {
               </svg>
             </div>
             <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Elevating the Standard</h3>
-            <p className="text-ninny-strawberry">
+            <p className="text-neutral-950">
               We source the highest quality cannabis products, carefully curated for a premium experience that takes you back to the golden era.
             </p>
           </div>
@@ -112,7 +112,7 @@ const Index = () => {
               </svg>
             </div>
             <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Promoting Inclusivity</h3>
-            <p className="text-ninny-strawberry">
+            <p className="text-neutral-900">
               Our dispensary welcomes everyone, creating a safe and accepting space for cannabis enthusiasts from all walks of life.
             </p>
           </div>
@@ -125,7 +125,7 @@ const Index = () => {
               </svg>
             </div>
             <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Educating and Empowering</h3>
-            <p className="text-ninny-strawberry">
+            <p className="text-neutral-900">
               We believe in empowering our customers through education, providing comprehensive information about our products and their benefits.
             </p>
           </div>
@@ -137,7 +137,7 @@ const Index = () => {
     <section className="py-24 bg-ninny-water text-ninny-cashmere relative" id="products-intro">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className={`${fadeInClass('products-intro')}`}>
-          <h2 className="text-4xl uppercase mb-6 font-genty">
+          <h2 className="uppercase mb-6 font-genty text-[FDFBE2]">
             Immerse Yourself in a Groovy Cannabis Culture
           </h2>
           <p className="mb-6 text-lg">
