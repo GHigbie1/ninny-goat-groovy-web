@@ -2,13 +2,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const logoUrl = "/lovable-uploads/9105d860-b1f1-4c9d-a68c-2b6236e5f43a.png";
+const logoUrl = "/lovable-uploads/f8a25f50-412a-4b92-9b9a-042bc5274479.jpg";
 
 const Footer = () => {
   return (
     <footer className="bg-ninny-water text-ninny-cashmere" id="contact">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="space-y-4">
             <img
@@ -48,24 +48,6 @@ const Footer = () => {
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Shop</a>
               <a href="#contact" className="hover:text-ninny-mandarin transition-colors">Contact</a>
             </nav>
-          </div>
-          
-          {/* Subscribe */}
-          <div className="space-y-4">
-            <h4 className="text-ninny-marigold font-funkydori">Subscribe</h4>
-            <form className="flex flex-col gap-3">
-              <input 
-                type="email" 
-                placeholder="your@email.com" 
-                className="px-4 py-2 rounded-full bg-ninny-cashmere/10 border border-ninny-cashmere/20 focus:outline-none focus:border-ninny-cashmere/50 text-black"
-              />
-              <button 
-                type="submit" 
-                className="bg-ninny-mandarin text-ninny-cashmere px-4 py-2 rounded-full font-bold uppercase tracking-wider hover:bg-ninny-marigold transition-colors"
-              >
-                Sign Up
-              </button>
-            </form>
           </div>
         </div>
 
@@ -109,3 +91,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
