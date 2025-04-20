@@ -24,15 +24,15 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center justify-between">
-        <Link to="/" className="text-ninny-raspberry text-2xl font-funkydori font-bold">
+        <Link to="/" className="text-[#7E1836] text-2xl font-funkydori font-bold">
           + Ninny Goat & Co.
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="nav-link">Home</a>
-          <a href="#blog" className="nav-link">Blog</a>
-          <a href="#shop" className="nav-link">Shop</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <a href="#home" className="nav-link text-[#7E1836]">Home</a>
+          <a href="#blog" className="nav-link text-[#7E1836]">Blog</a>
+          <a href="#shop" className="nav-link text-[#7E1836]">Shop</a>
+          <a href="#contact" className="nav-link text-[#7E1836]">Contact</a>
         </nav>
         
         <a href="#shop" className="retro-button text-sm hidden md:flex">
@@ -40,7 +40,7 @@ const Header = () => {
         </a>
         
         <button 
-          className="md:hidden text-ninny-raspberry"
+          className="md:hidden text-[#7E1836]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
@@ -61,10 +61,10 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-ninny-cashmere absolute top-full left-0 w-full p-4 shadow-md z-50">
           <nav className="flex flex-col space-y-4">
-            <a href="#home" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Home</a>
-            <a href="#blog" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-            <a href="#shop" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Shop</a>
-            <a href="#contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+            <a href="#home" className="nav-link text-[#7E1836]" onClick={() => setMobileMenuOpen(false)}>Home</a>
+            <a href="#blog" className="nav-link text-[#7E1836]" onClick={() => setMobileMenuOpen(false)}>Blog</a>
+            <a href="#shop" className="nav-link text-[#7E1836]" onClick={() => setMobileMenuOpen(false)}>Shop</a>
+            <a href="#contact" className="nav-link text-[#7E1836]" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             <a href="#shop" className="retro-button text-sm self-start" onClick={() => setMobileMenuOpen(false)}>Shop Now</a>
           </nav>
         </div>
