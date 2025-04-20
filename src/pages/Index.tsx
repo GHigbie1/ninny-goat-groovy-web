@@ -41,7 +41,7 @@ const Index = () => {
     <section id="home" className="min-h-screen flex items-center py-20 relative">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center relative z-10">
         <div className={`${fadeInClass('home')} space-y-6`}>
-          <h1 className="leading-none text-ninny-raspberry font-genty text-[0F7776]">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
+          <h1 className="leading-none text-ninny-water font-genty text-[0F7776]">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
           <p className="text-xl text-ninny-raspberry max-w-lg">Get On the Good Vibes Train – Cannabis That Grooves With Your Soul</p>
           <a href="#shop" className="retro-button inline-block">
             Shop Now
