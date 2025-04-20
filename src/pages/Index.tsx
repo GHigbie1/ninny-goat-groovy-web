@@ -151,9 +151,7 @@ const Index = () => {
     {/* Blog Section - Updated with new images and content */}
     <section id="blog" className="py-24 bg-ninny-cashmere/60 relative">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 className={`text-center text-4xl uppercase text-ninny-raspberry mb-16 ${fadeInClass('blog')} font-genty`}>
-          Groovy Blog
-        </h2>
+        <h2 className={`text-center text-4xl uppercase text-ninny-raspberry mb-16 ${fadeInClass('blog')} font-genty`}>OUR BLOGS</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           <BlogCard title="Soul Train: Music & Cannabis" description="Explore the vibrant connection between 70s music culture and cannabis, tracing the rhythm of social change." date="July 15, 2023" author="Disco Dan" image="/lovable-uploads/bfed2b8d-6c79-424d-8c25-a3ef7d91d80f.png" link="/blog/soul-train-culture" />
