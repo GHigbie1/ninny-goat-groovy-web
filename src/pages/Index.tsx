@@ -131,15 +131,11 @@ const Index = () => {
     <section className="py-24 bg-ninny-water text-ninny-cashmere relative" id="products-intro">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className={`${fadeInClass('products-intro')}`}>
-          <h2 className="uppercase mb-6 font-genty text-[FDFBE2]">
-            Immerse Yourself in a Groovy Cannabis Culture
-          </h2>
+          <h2 className="uppercase mb-6 font-genty text-[FDFBE2]">IMMERSE YOURSELF </h2>
           <p className="mb-6 text-lg">
             Founded by true cannabis enthusiasts, our dispensary exudes a passion for the plant and a commitment to creating a haven for like-minded individuals who dig the good vibes.
           </p>
-          <p className="mb-10">
-            Step into a far-out space designed for cannabis people, by cannabis people and experience a shopping environment that feels like home in the 70s, man!
-          </p>
+          <p className="mb-10">Step into our finely curated store designed for cannabis people, by cannabis people and experience a shopping environment that feels like home!</p>
           <a href="#shop" className="bg-ninny-mandarin text-ninny-cashmere px-6 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-ninny-marigold transition-colors inline-block">
             Explore Our Products
           </a>
