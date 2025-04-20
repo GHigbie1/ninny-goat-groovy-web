@@ -58,9 +58,7 @@ const Index = () => {
     {/* Shop Section - MOVED UP to be right after Hero */}
     <section id="shop" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 className={`text-center text-4xl font-funkydori uppercase text-ninny-raspberry mb-16 ${fadeInClass('shop')} font-genty`}>
-          Far Out Products
-        </h2>
+        <h2 className={`text-center text-4xl font-funkydori uppercase text-ninny-raspberry mb-16 ${fadeInClass('shop')} font-genty`}>OUR PRODUCTS</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-16">
           <ProductCard title="Flower" description="Premium cannabis strains with that vintage quality" iconBg="bg-ninny-marigold" iconSrc="/lovable-uploads/7c74c706-1102-43a2-bcd2-fe521ab66c26.png" />
