@@ -22,7 +22,7 @@
   }
 
   body {
-    @apply font-loubag;
+    @apply font-loubag text-black;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -124,7 +124,7 @@
   }
 
   .nav-link {
-    @apply relative uppercase font-semibold tracking-wider text-ninny-ebony hover:text-ninny-mandarin transition-colors;
+    @apply relative uppercase font-semibold tracking-wider text-black hover:text-ninny-mandarin transition-colors;
   }
 
   .nav-link::after {

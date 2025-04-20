@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -64,7 +63,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-ninny-cashmere/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm opacity-80">
+          <p className="text-sm text-ninny-cashmere/80">
             © 2025 Ninny Goat & Co. All rights reserved.
           </p>
           
