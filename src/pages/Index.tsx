@@ -4,7 +4,6 @@ import Footer from '@/components/Footer';
 import GroovyLines from '@/components/GroovyLines';
 import ProductCard from '@/components/ProductCard';
 import BlogCard from '@/components/BlogCard';
-
 const Index = () => {
   const [visible, setVisible] = useState<Record<string, boolean>>({});
 
@@ -32,9 +31,7 @@ const Index = () => {
       });
     };
   }, []);
-
   const fadeInClass = (id: string) => visible[id] ? 'opacity-100 translate-y-0 transition-all duration-1000' : 'opacity-0 translate-y-10 transition-all duration-1000';
-
   return <>
     <Header />
     
@@ -44,9 +41,7 @@ const Index = () => {
     <section id="home" className="min-h-screen flex items-center py-20 relative">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center relative z-10">
         <div className={`${fadeInClass('home')} space-y-6`}>
-          <h1 className="text-[clamp(2.7rem,5vw+1rem,6rem)] leading-none text-ninny-raspberry">
-            Vintage 70s Records
-          </h1>
+          <h1 className="text-[clamp(2.7rem,5vw+1rem,6rem)] leading-none text-ninny-raspberry">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
           <p className="text-xl text-ninny-raspberry max-w-lg">
             Step into our groovy time capsule where vintage vibes meet premium cannabis.
           </p>
@@ -185,32 +180,11 @@ const Index = () => {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <BlogCard 
-            title="Soul Train: Music & Cannabis" 
-            description="Explore the vibrant connection between 70s music culture and cannabis, tracing the rhythm of social change." 
-            date="July 15, 2023" 
-            author="Disco Dan" 
-            image="/lovable-uploads/bfed2b8d-6c79-424d-8c25-a3ef7d91d80f.png" 
-            link="/blog/soul-train-culture" 
-          />
+          <BlogCard title="Soul Train: Music & Cannabis" description="Explore the vibrant connection between 70s music culture and cannabis, tracing the rhythm of social change." date="July 15, 2023" author="Disco Dan" image="/lovable-uploads/bfed2b8d-6c79-424d-8c25-a3ef7d91d80f.png" link="/blog/soul-train-culture" />
           
-          <BlogCard 
-            title="Vinyl Vibes & Green Scenes" 
-            description="Dive into how vintage vinyl records and premium cannabis create the perfect nostalgic experience." 
-            date="August 10, 2023" 
-            author="Record Roller" 
-            image="/lovable-uploads/60332039-deba-4d8d-9a20-7bfd3b684233.png" 
-            link="/blog/vinyl-cannabis-connection" 
-          />
+          <BlogCard title="Vinyl Vibes & Green Scenes" description="Dive into how vintage vinyl records and premium cannabis create the perfect nostalgic experience." date="August 10, 2023" author="Record Roller" image="/lovable-uploads/60332039-deba-4d8d-9a20-7bfd3b684233.png" link="/blog/vinyl-cannabis-connection" />
           
-          <BlogCard 
-            title="Roller Disco Revolution" 
-            description="A journey through the intersections of roller skating, music, and cannabis in the radical 1970s." 
-            date="September 5, 2023" 
-            author="Groovy Greta" 
-            image="/lovable-uploads/53741e30-b75e-4731-8834-af7367041663.png" 
-            link="/blog/roller-disco-revolution" 
-          />
+          <BlogCard title="Roller Disco Revolution" description="A journey through the intersections of roller skating, music, and cannabis in the radical 1970s." date="September 5, 2023" author="Groovy Greta" image="/lovable-uploads/53741e30-b75e-4731-8834-af7367041663.png" link="/blog/roller-disco-revolution" />
         </div>
         
         <div className="text-center mt-12">
@@ -243,5 +217,4 @@ const Index = () => {
     <Footer />
   </>;
 };
-
 export default Index;
