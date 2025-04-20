@@ -26,7 +26,20 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-genty uppercase tracking-wider;
+    @apply font-genty uppercase tracking-wider text-ninny-raspberry;
+  }
+
+  /* Responsive header sizing */
+  h1 {
+    @apply text-[clamp(2.5rem,5vw+1rem,5rem)];
+  }
+
+  h2 {
+    @apply text-[clamp(2rem,4vw+1rem,4rem)];
+  }
+
+  h3 {
+    @apply text-[clamp(1.5rem,3vw+0.5rem,3rem)];
   }
 }
 
