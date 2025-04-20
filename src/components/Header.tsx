@@ -35,21 +35,22 @@ const Header = () => {
           <a href="#contact" className="nav-link text-[#0F7776]">Contact</a>
         </nav>
         
-        <a href="#shop" className="retro-button text-sm hidden md:flex">
+        <a href="#shop" className="retro-button text-sm hidden md:flex" style={{backgroundColor: '#F8B832'}}>
           Shop Now
         </a>
         
         <button 
-          className="md:hidden text-[#0F7776]"
+          className="md:hidden"
+          style={{ color: '#F8B832' }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F8B832" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 6 6 18"></path>
               <path d="m6 6 12 12"></path>
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F8B832" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="4" x2="20" y1="12" y2="12"></line>
               <line x1="4" x2="20" y1="6" y2="6"></line>
               <line x1="4" x2="20" y1="18" y2="18"></line>
@@ -65,7 +66,7 @@ const Header = () => {
             <a href="#blog" className="nav-link text-[#0F7776]" onClick={() => setMobileMenuOpen(false)}>Blog</a>
             <a href="#shop" className="nav-link text-[#0F7776]" onClick={() => setMobileMenuOpen(false)}>Shop</a>
             <a href="#contact" className="nav-link text-[#0F7776]" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <a href="#shop" className="retro-button text-sm self-start" onClick={() => setMobileMenuOpen(false)}>Shop Now</a>
+            <a href="#shop" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</a>
           </nav>
         </div>
       )}
@@ -74,4 +75,3 @@ const Header = () => {
 };
 
 export default Header;
-
