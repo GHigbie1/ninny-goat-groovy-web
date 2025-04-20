@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import GroovyLines from '@/components/GroovyLines';
 import ProductCard from '@/components/ProductCard';
 import BlogCard from '@/components/BlogCard';
+
 const Index = () => {
   const [visible, setVisible] = useState<Record<string, boolean>>({});
 
@@ -32,6 +33,7 @@ const Index = () => {
     };
   }, []);
   const fadeInClass = (id: string) => visible[id] ? 'opacity-100 translate-y-0 transition-all duration-1000' : 'opacity-0 translate-y-10 transition-all duration-1000';
+  
   return <>
     <Header />
     
@@ -41,7 +43,7 @@ const Index = () => {
     <section id="home" className="min-h-screen flex items-center py-20 relative">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center relative z-10">
         <div className={`${fadeInClass('home')} space-y-6`}>
-          <h1 className="text-[clamp(2.7rem,5vw+1rem,6rem)] leading-none text-ninny-raspberry">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
+          <h1 className="text-[clamp(2.7rem,5vw+1rem,6rem)] leading-none text-ninny-raspberry font-genty">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
           <p className="text-xl text-ninny-raspberry max-w-lg">Get On the Good Vibes Train – Cannabis That Grooves With Your Soul</p>
           <a href="#shop" className="retro-button inline-block">
             Shop Now
@@ -58,9 +60,7 @@ const Index = () => {
     {/* Shop Section - MOVED UP to be right after Hero */}
     <section id="shop" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 className={`text-center text-4xl font-funkydori uppercase text-ninny-raspberry mb-16 ${fadeInClass('shop')}`} style={{
-          fontFamily: 'Pacifico, Monoton, cursive'
-        }}>
+        <h2 className={`text-center text-4xl font-funkydori uppercase text-ninny-raspberry mb-16 ${fadeInClass('shop')} font-genty`}>
           Far Out Products
         </h2>
         
@@ -85,9 +85,7 @@ const Index = () => {
     {/* Our Mission Section - MOVED DOWN after Shop */}
     <section id="mission" className="py-24 bg-ninny-cashmere/60 relative">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 className={`text-center text-4xl font-funkydori text-ninny-raspberry mb-16 ${fadeInClass('mission')}`} style={{
-          fontFamily: 'Pacifico, Monoton, cursive'
-        }}>
+        <h2 className={`text-center text-4xl font-funkydori text-ninny-raspberry mb-16 ${fadeInClass('mission')} font-genty`}>
           Our Mission
         </h2>
         <div className="grid md:grid-cols-3 gap-12">
@@ -100,9 +98,7 @@ const Index = () => {
                 <path d="m17 9 4 2v12l-4-2V9z" />
               </svg>
             </div>
-            <h3 className="text-ninny-water text-xl uppercase mb-2" style={{
-              fontFamily: 'Pacifico, Monoton, cursive'
-            }}>Elevating the Standard</h3>
+            <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Elevating the Standard</h3>
             <p className="text-ninny-strawberry">
               We source the highest quality cannabis products, carefully curated for a premium experience that takes you back to the golden era.
             </p>
@@ -117,9 +113,7 @@ const Index = () => {
                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg>
             </div>
-            <h3 className="text-ninny-water text-xl uppercase mb-2" style={{
-              fontFamily: 'Pacifico, Monoton, cursive'
-            }}>Promoting Inclusivity</h3>
+            <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Promoting Inclusivity</h3>
             <p className="text-ninny-strawberry">
               Our dispensary welcomes everyone, creating a safe and accepting space for cannabis enthusiasts from all walks of life.
             </p>
@@ -132,9 +126,7 @@ const Index = () => {
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
             </div>
-            <h3 className="text-ninny-water text-xl uppercase mb-2" style={{
-              fontFamily: 'Pacifico, Monoton, cursive'
-            }}>Educating and Empowering</h3>
+            <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Educating and Empowering</h3>
             <p className="text-ninny-strawberry">
               We believe in empowering our customers through education, providing comprehensive information about our products and their benefits.
             </p>
@@ -147,9 +139,9 @@ const Index = () => {
     <section className="py-24 bg-ninny-water text-ninny-cashmere relative" id="products-intro">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className={`${fadeInClass('products-intro')}`}>
-          <h2 className="text-4xl uppercase mb-6" style={{
-            fontFamily: 'Pacifico, Monoton, cursive'
-          }}>Immerse Yourself in a Groovy Cannabis Culture</h2>
+          <h2 className="text-4xl uppercase mb-6 font-genty">
+            Immerse Yourself in a Groovy Cannabis Culture
+          </h2>
           <p className="mb-6 text-lg">
             Founded by true cannabis enthusiasts, our dispensary exudes a passion for the plant and a commitment to creating a haven for like-minded individuals who dig the good vibes.
           </p>
@@ -171,9 +163,7 @@ const Index = () => {
     {/* Blog Section - Updated with new images and content */}
     <section id="blog" className="py-24 bg-ninny-cashmere/60 relative">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 className={`text-center text-4xl uppercase text-ninny-raspberry mb-16 ${fadeInClass('blog')}`} style={{
-          fontFamily: 'Genty, sans-serif'
-        }}>
+        <h2 className={`text-center text-4xl uppercase text-ninny-raspberry mb-16 ${fadeInClass('blog')} font-genty`}>
           Groovy Blog
         </h2>
         
@@ -194,9 +184,7 @@ const Index = () => {
     {/* Newsletter Section */}
     <section id="newsletter" className="py-24 relative">
       <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
-        <h2 className={`text-4xl uppercase text-ninny-water mb-8 ${fadeInClass('newsletter')}`} style={{
-          fontFamily: 'Pacifico, Monoton, cursive'
-        }}>
+        <h2 className={`text-4xl uppercase text-ninny-water mb-8 ${fadeInClass('newsletter')} font-genty`}>
           Join the Dispo Disco!
         </h2>
         <p className={`text-ninny-raspberry mb-8 ${fadeInClass('newsletter')}`}>
