@@ -42,9 +42,7 @@ const Index = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center relative z-10">
         <div className={`${fadeInClass('home')} space-y-6`}>
           <h1 className="text-[clamp(2.7rem,5vw+1rem,6rem)] leading-none text-ninny-raspberry">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
-          <p className="text-xl text-ninny-raspberry max-w-lg">
-            Step into our groovy time capsule where vintage vibes meet premium cannabis.
-          </p>
+          <p className="text-xl text-ninny-raspberry max-w-lg">Get On the Good Vibes Train – Cannabis That Grooves With Your Soul</p>
           <a href="#shop" className="retro-button inline-block">
             Shop Now
           </a>
