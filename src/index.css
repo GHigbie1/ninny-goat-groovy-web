@@ -111,7 +111,7 @@
 
 @layer components {
   .retro-button {
-    @apply px-8 py-3 bg-ninny-water text-ninny-cashmere font-bold uppercase tracking-wider rounded-full transition-all hover:bg-ninny-mandarin inline-flex items-center justify-center;
+    @apply px-8 py-3 bg-[#F8B832] text-ninny-cashmere font-bold uppercase tracking-wider rounded-full transition-all hover:bg-ninny-mandarin inline-flex items-center justify-center;
   }
 
   .retro-heading {
