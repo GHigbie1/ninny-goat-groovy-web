@@ -47,7 +47,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 57 98% 97%; /* Change to approximate HSL for #FDFBE2 */
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
