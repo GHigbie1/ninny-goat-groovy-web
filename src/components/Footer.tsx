@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const logoUrl = "/lovable-uploads/9105d860-b1f1-4c9d-a68c-2b6236e5f43a.png";
+
 const Footer = () => {
   return (
     <footer className="bg-ninny-water text-ninny-cashmere" id="contact">
@@ -9,13 +11,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-ninny-marigold text-xl font-bold font-funkydori">+ Ninny Goat & Co.</h3>
-            <p className="text-sm opacity-80">
+            <img
+              src={logoUrl}
+              alt="Ninny Goat & Co. Logo"
+              className="h-14 w-auto"
+              style={{ maxHeight: 56 }}
+            />
+            <p className="text-sm opacity-80 text-black">
               512 US-5<br />
               Fairlee, VT 05045<br />
               (555) 123-4567
             </p>
-            <p className="text-xs opacity-60">
+            <p className="text-xs opacity-60 text-black">
               Adult-use cannabis products. For use by adults 21 and older. Keep out of reach of children.
             </p>
           </div>
@@ -23,7 +30,7 @@ const Footer = () => {
           {/* Shop Links */}
           <div className="space-y-2">
             <h4 className="text-ninny-marigold font-funkydori">Shop</h4>
-            <nav className="flex flex-col gap-2 text-ninny-cashmere/80">
+            <nav className="flex flex-col gap-2 text-black">
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Flower</a>
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Edibles</a>
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Vapes</a>
@@ -35,7 +42,7 @@ const Footer = () => {
           {/* Navigation */}
           <div className="space-y-2">
             <h4 className="text-ninny-marigold font-funkydori">Navigation</h4>
-            <nav className="flex flex-col gap-2 text-ninny-cashmere/80">
+            <nav className="flex flex-col gap-2 text-black">
               <a href="#home" className="hover:text-ninny-mandarin transition-colors">Home</a>
               <a href="#blog" className="hover:text-ninny-mandarin transition-colors">Blog</a>
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Shop</a>
@@ -50,7 +57,7 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="your@email.com" 
-                className="px-4 py-2 rounded-full bg-ninny-cashmere/10 border border-ninny-cashmere/20 focus:outline-none focus:border-ninny-cashmere/50 text-ninny-cashmere"
+                className="px-4 py-2 rounded-full bg-ninny-cashmere/10 border border-ninny-cashmere/20 focus:outline-none focus:border-ninny-cashmere/50 text-black"
               />
               <button 
                 type="submit" 
@@ -64,18 +71,18 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-ninny-cashmere/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-ninny-cashmere/80">
+          <p className="text-sm text-black opacity-80">
             © 2025 Ninny Goat & Co. All rights reserved.
           </p>
           
           <div className="flex gap-6 items-center">
-            <nav className="flex gap-6 text-sm opacity-80">
+            <nav className="flex gap-6 text-sm text-black opacity-80">
               <a href="#" className="hover:text-ninny-marigold transition-colors">Terms</a>
               <a href="#" className="hover:text-ninny-marigold transition-colors">Privacy</a>
               <a href="#" className="hover:text-ninny-marigold transition-colors">Cookies</a>
             </nav>
             
-            <div className="flex gap-4 text-ninny-cashmere ml-6">
+            <div className="flex gap-4 text-black ml-6">
               <a href="#" aria-label="Facebook" className="hover:text-ninny-marigold transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -102,4 +109,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
