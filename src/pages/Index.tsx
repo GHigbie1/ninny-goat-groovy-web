@@ -95,9 +95,7 @@ const Index = () => {
               </svg>
             </div>
             <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Elevating the Standard</h3>
-            <p className="text-neutral-950">
-              We source the highest quality cannabis products, carefully curated for a premium experience that takes you back to the golden era.
-            </p>
+            <p className="text-neutral-950">We source the highest quality cannabis products, carefully curated for a premium experience. </p>
           </div>
           
           <div className={`text-center ${fadeInClass('mission')}`}>
@@ -123,9 +121,7 @@ const Index = () => {
               </svg>
             </div>
             <h3 className="text-ninny-water text-xl uppercase mb-2 font-genty">Educating and Empowering</h3>
-            <p className="text-neutral-900">
-              We believe in empowering our customers through education, providing comprehensive information about our products and their benefits.
-            </p>
+            <p className="text-neutral-900">We believe in empowering our customers through education and comprehensive information.</p>
           </div>
         </div>
       </div>
