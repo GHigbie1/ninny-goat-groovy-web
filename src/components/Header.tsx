@@ -39,11 +39,11 @@ const Header = () => {
           <Link to="/" className="nav-link text-black">Home</Link>
           <Link to="/about" className="nav-link text-black">About</Link>
           <a href="#blog" className="nav-link text-black">Blog</a>
-          <a href="#shop" className="nav-link text-black">Shop</a>
+          <a href="https://ninnygoat.co/collections/all" className="nav-link text-black">Shop</a>
           <a href="#contact" className="nav-link text-black">Contact</a>
         </nav>
 
-        <a href="#shop" className="retro-button text-sm hidden md:flex" style={{backgroundColor: '#F8B832'}}>
+        <a href="https://ninnygoat.co/collections/all" className="retro-button text-sm hidden md:flex" style={{backgroundColor: '#F8B832'}}>
           Shop Now
         </a>
 
@@ -73,9 +73,9 @@ const Header = () => {
             <Link to="/" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Home</Link>
             <Link to="/about" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <a href="#blog" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-            <a href="#shop" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Shop</a>
+            <a href="https://ninnygoat.co/collections/all" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Shop</a>
             <a href="#contact" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <a href="#shop" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</a>
+            <a href="https://ninnygoat.co/collections/all" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</a>
           </nav>
         </div>
       )}

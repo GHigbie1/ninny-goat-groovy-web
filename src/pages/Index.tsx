@@ -46,7 +46,7 @@ const Index = () => {
         <div className={`${fadeInClass('home')} space-y-6`}>
           <h1 className="leading-none text-ninny-water font-genty text-[0F7776]">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
           <p className="text-xl text-ninny-raspberry max-w-lg">Get On the Good Vibes Train – Cannabis That Grooves With Your Soul</p>
-          <a href="#shop" className="retro-button inline-block">
+          <a href="https://ninnygoat.co/collections/all" className="retro-button inline-block">
             Shop Now
           </a>
         </div>
@@ -93,6 +93,7 @@ const Index = () => {
             description="Powerful extracts with that pure 70s euphoria" 
             iconBg="bg-ninny-raspberry" 
             iconSrc="/lovable-uploads/c41c7e6b-9ba9-4bdd-8a73-09481cf54775.png"
+            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=concentrates"
           />
           
           <ProductCard 
@@ -100,11 +101,12 @@ const Index = () => {
             description="Tools and gear with vintage-inspired designs" 
             iconBg="bg-ninny-mandarin" 
             iconSrc="/lovable-uploads/6eada197-f35a-46b0-aeb3-ddd7b4588e7b.png"
+            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=accessories"
           />
         </div>
         
         <div className="text-center">
-          <a href="#" className="retro-button">View All Products</a>
+          <a href="https://ninnygoat.co/collections/all" className="retro-button">View All Products</a>
         </div>
       </div>
     </section>
