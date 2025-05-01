@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import GroovyLines from '@/components/GroovyLines';
 import ProductCard from '@/components/ProductCard';
 import BlogCard from '@/components/BlogCard';
+
 const Index = () => {
   const [visible, setVisible] = useState<Record<string, boolean>>({});
 
@@ -31,7 +32,9 @@ const Index = () => {
       });
     };
   }, []);
+  
   const fadeInClass = (id: string) => visible[id] ? 'opacity-100 translate-y-0 transition-all duration-1000' : 'opacity-0 translate-y-10 transition-all duration-1000';
+  
   return <>
     <Header />
     
@@ -61,15 +64,43 @@ const Index = () => {
         <h2 className={`text-center text-4xl font-funkydori uppercase text-ninny-raspberry mb-16 ${fadeInClass('shop')} font-genty`}>OUR PRODUCTS</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-16">
-          <ProductCard title="Flower" description="Premium cannabis strains with that vintage quality" iconBg="bg-ninny-marigold" iconSrc="/lovable-uploads/7c74c706-1102-43a2-bcd2-fe521ab66c26.png" />
+          <ProductCard 
+            title="Flower" 
+            description="Premium cannabis strains with that vintage quality" 
+            iconBg="bg-ninny-marigold" 
+            iconSrc="/lovable-uploads/7c74c706-1102-43a2-bcd2-fe521ab66c26.png" 
+            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=flower"
+          />
           
-          <ProductCard title="Edibles" description="Groovy treats that'll take you back to the 70s" iconBg="bg-ninny-water" iconSrc="/lovable-uploads/83c3b308-127f-46bd-9eb6-ef6d0bc17530.png" />
+          <ProductCard 
+            title="Edibles" 
+            description="Groovy treats that'll take you back to the 70s" 
+            iconBg="bg-ninny-water" 
+            iconSrc="/lovable-uploads/83c3b308-127f-46bd-9eb6-ef6d0bc17530.png"
+            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=edibles"
+          />
           
-          <ProductCard title="Vapes" description="Modern tech with retro style for easy enjoyment" iconBg="bg-ninny-marigold" iconSrc="/lovable-uploads/a4cce5bd-dbfa-4a79-a948-7f3df095317b.png" />
+          <ProductCard 
+            title="Vapes" 
+            description="Modern tech with retro style for easy enjoyment" 
+            iconBg="bg-ninny-marigold" 
+            iconSrc="/lovable-uploads/a4cce5bd-dbfa-4a79-a948-7f3df095317b.png"
+            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=vaporizers"
+          />
           
-          <ProductCard title="Concentrates" description="Powerful extracts with that pure 70s euphoria" iconBg="bg-ninny-raspberry" iconSrc="/lovable-uploads/c41c7e6b-9ba9-4bdd-8a73-09481cf54775.png" />
+          <ProductCard 
+            title="Concentrates" 
+            description="Powerful extracts with that pure 70s euphoria" 
+            iconBg="bg-ninny-raspberry" 
+            iconSrc="/lovable-uploads/c41c7e6b-9ba9-4bdd-8a73-09481cf54775.png"
+          />
           
-          <ProductCard title="Accessories" description="Tools and gear with vintage-inspired designs" iconBg="bg-ninny-mandarin" iconSrc="/lovable-uploads/6eada197-f35a-46b0-aeb3-ddd7b4588e7b.png" />
+          <ProductCard 
+            title="Accessories" 
+            description="Tools and gear with vintage-inspired designs" 
+            iconBg="bg-ninny-mandarin" 
+            iconSrc="/lovable-uploads/6eada197-f35a-46b0-aeb3-ddd7b4588e7b.png"
+          />
         </div>
         
         <div className="text-center">

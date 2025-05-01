@@ -31,9 +31,9 @@ const Footer = () => {
           <div className="space-y-2">
             <h4 className="text-ninny-marigold font-funkydori">Shop</h4>
             <nav className="flex flex-col gap-2 text-black">
-              <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Flower</a>
-              <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Edibles</a>
-              <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Vapes</a>
+              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=flower" className="hover:text-ninny-mandarin transition-colors">Flower</a>
+              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=edibles" className="hover:text-ninny-mandarin transition-colors">Edibles</a>
+              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=vaporizers" className="hover:text-ninny-mandarin transition-colors">Vapes</a>
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Concentrates</a>
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Accessories</a>
             </nav>
