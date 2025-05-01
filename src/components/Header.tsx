@@ -36,7 +36,8 @@ const Header = () => {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="nav-link text-black">Home</a>
+          <Link to="/" className="nav-link text-black">Home</Link>
+          <Link to="/about" className="nav-link text-black">About</Link>
           <a href="#blog" className="nav-link text-black">Blog</a>
           <a href="#shop" className="nav-link text-black">Shop</a>
           <a href="#contact" className="nav-link text-black">Contact</a>
@@ -69,7 +70,8 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-ninny-cashmere absolute top-full left-0 w-full p-4 shadow-md z-50">
           <nav className="flex flex-col space-y-4">
-            <a href="#home" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Home</a>
+            <Link to="/" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link to="/about" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <a href="#blog" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Blog</a>
             <a href="#shop" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Shop</a>
             <a href="#contact" className="nav-link text-black" onClick={() => setMobileMenuOpen(false)}>Contact</a>

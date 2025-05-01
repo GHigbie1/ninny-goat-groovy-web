@@ -43,7 +43,8 @@ const Footer = () => {
           <div className="space-y-2">
             <h4 className="text-ninny-marigold font-funkydori">Navigation</h4>
             <nav className="flex flex-col gap-2 text-black">
-              <a href="#home" className="hover:text-ninny-mandarin transition-colors">Home</a>
+              <Link to="/" className="hover:text-ninny-mandarin transition-colors">Home</Link>
+              <Link to="/about" className="hover:text-ninny-mandarin transition-colors">About</Link>
               <a href="#blog" className="hover:text-ninny-mandarin transition-colors">Blog</a>
               <a href="#shop" className="hover:text-ninny-mandarin transition-colors">Shop</a>
               <a href="#contact" className="hover:text-ninny-mandarin transition-colors">Contact</a>
@@ -91,4 +92,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
