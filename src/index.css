@@ -1,8 +1,17 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'GentyDemo';
+    src: url('/gentydemo-regular-webfont (1).woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   @font-face {
     font-family: 'Genty';
     src: url('/fonts/Genty.woff2') format('woff2'),
@@ -105,7 +114,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply text-ninny-raspberry uppercase tracking-wider;
-    font-family: 'Pacifico', 'Monoton', cursive;
+    font-family: 'GentyDemo', 'Pacifico', 'Monoton', cursive;
   }
 }
 
@@ -115,7 +124,7 @@
   }
 
   .retro-heading {
-    font-family: 'Pacifico', 'Monoton', cursive;
+    font-family: 'GentyDemo', 'Pacifico', 'Monoton', cursive;
     @apply uppercase tracking-wider;
   }
 

@@ -22,9 +22,7 @@ const ProductCard = ({
       <div className={`w-20 h-20 ${iconBg} rounded-full flex items-center justify-center mb-4 overflow-hidden`}>
         {iconSrc ? <img src={iconSrc} alt={`${title} icon`} className="w-full h-full object-cover" /> : children}
       </div>
-      <h3 className="text-ninny-water text-xl uppercase mb-4" style={{
-        fontFamily: 'Pacifico, Monoton, cursive'
-      }}>{title}</h3>
+      <h3 className="text-ninny-water text-xl uppercase mb-4 font-genty">{title}</h3>
       <a href={link} className="text-ninny-mandarin font-bold hover:underline">Explore</a>
     </article>
   );
