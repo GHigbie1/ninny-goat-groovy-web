@@ -23,7 +23,7 @@ const ProductCard = ({
         {iconSrc ? <img src={iconSrc} alt={`${title} icon`} className="w-full h-full object-cover" /> : children}
       </div>
       <h3 className="text-ninny-water text-xl uppercase mb-4 font-genty">{title}</h3>
-      <a href={link} className="text-ninny-mandarin font-bold hover:underline">Explore</a>
+      <a href={link} className="text-ninny-mandarin font-loubag font-bold hover:underline">Explore</a>
     </article>
   );
 };
