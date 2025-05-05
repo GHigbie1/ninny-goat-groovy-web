@@ -58,7 +58,7 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Poppins:wght@700&display=swap');
 
 @layer base {
   :root {
@@ -120,7 +120,8 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply text-ninny-raspberry uppercase tracking-wider;
-    font-family: 'GentyDemo', 'Pacifico', 'Monoton', cursive;
+    font-family: 'Poppins', 'Monoton', sans-serif;
+    font-weight: 700;
   }
 }
 
@@ -130,7 +131,8 @@
   }
 
   .retro-heading {
-    font-family: 'GentyDemo', 'Pacifico', 'Monoton', cursive;
+    font-family: 'Poppins', 'Monoton', sans-serif;
+    font-weight: 700;
     @apply uppercase tracking-wider;
   }
 

@@ -76,7 +76,7 @@ export default {
       fontFamily: {
         'funkydori': ['Funkydori', 'sans-serif'],
         'body': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
-        'genty': ['GentyDemo', 'Pacifico', 'Monoton', 'cursive'],
+        'genty': ['Poppins', 'system-ui', 'sans-serif'],
         'loubag': ['Loubag', 'sans-serif']
       },
       borderRadius: {
