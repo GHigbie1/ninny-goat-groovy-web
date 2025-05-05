@@ -43,9 +43,9 @@ const Header = () => {
           <a href="#contact" className="nav-link text-[#0F7776] font-poppins font-bold">Contact</a>
         </nav>
 
-        <a href="https://ninnygoat.co/collections/all" className="retro-button text-sm hidden md:flex" style={{backgroundColor: '#F8B832'}}>
+        <Link to="/shop" className="retro-button text-sm hidden md:flex" style={{backgroundColor: '#F8B832'}}>
           Shop Now
-        </a>
+        </Link>
 
         <button 
           className="md:hidden"
@@ -75,7 +75,7 @@ const Header = () => {
             <a href="#blog" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Blog</a>
             <Link to="/shop" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Shop</Link>
             <a href="#contact" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <a href="https://ninnygoat.co/collections/all" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</a>
+            <Link to="/shop" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</Link>
           </nav>
         </div>
       )}
