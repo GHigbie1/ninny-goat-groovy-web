@@ -39,13 +39,13 @@ const Header = () => {
           <Link to="/" className="nav-link text-[#0F7776] font-poppins font-bold">Home</Link>
           <Link to="/about" className="nav-link text-[#0F7776] font-poppins font-bold">About</Link>
           <a href="#blog" className="nav-link text-[#0F7776] font-poppins font-bold">Blog</a>
-          <Link to="/shop" className="nav-link text-[#0F7776] font-poppins font-bold">Shop</Link>
+          <a href="https://ninnygoat.co/collections/all" className="nav-link text-[#0F7776] font-poppins font-bold">Shop</a>
           <a href="#contact" className="nav-link text-[#0F7776] font-poppins font-bold">Contact</a>
         </nav>
 
-        <Link to="/shop" className="retro-button text-sm hidden md:flex" style={{backgroundColor: '#F8B832'}}>
+        <a href="https://ninnygoat.co/collections/all" className="retro-button text-sm hidden md:flex" style={{backgroundColor: '#F8B832'}}>
           Shop Now
-        </Link>
+        </a>
 
         <button 
           className="md:hidden"
@@ -73,9 +73,9 @@ const Header = () => {
             <Link to="/" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Home</Link>
             <Link to="/about" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <a href="#blog" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-            <Link to="/shop" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Shop</Link>
+            <a href="https://ninnygoat.co/collections/all" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Shop</a>
             <a href="#contact" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <Link to="/shop" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</Link>
+            <a href="https://ninnygoat.co/collections/all" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</a>
           </nav>
         </div>
       )}
