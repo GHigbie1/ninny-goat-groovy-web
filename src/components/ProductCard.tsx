@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface ProductCardProps {
   title: string;
@@ -15,7 +16,7 @@ const ProductCard = ({
   iconBg,
   iconSrc,
   children,
-  link = "#"
+  link = "/shop"
 }: ProductCardProps) => {
   return (
     <article className="product-card bg-ninny-cashmere rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col items-center text-center">
@@ -23,9 +24,9 @@ const ProductCard = ({
         {iconSrc ? <img src={iconSrc} alt={`${title} icon`} className="w-full h-full object-cover" /> : children}
       </div>
       <h3 className="text-ninny-water text-xl uppercase mb-4 font-genty">{title}</h3>
-      <a href={link} className="text-ninny-mandarin font-loubag font-bold hover:underline">
+      <Link to="/shop" className="text-ninny-mandarin font-loubag font-bold hover:underline">
         Explore
-      </a>
+      </Link>
     </article>
   );
 };

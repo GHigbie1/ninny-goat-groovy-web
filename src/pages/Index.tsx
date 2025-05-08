@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GroovyLines from '@/components/GroovyLines';
@@ -46,9 +47,9 @@ const Index = () => {
         <div className={`${fadeInClass('home')} space-y-6`}>
           <h1 className="leading-none text-ninny-water font-genty text-[0F7776]">STAY SMOOTH. STAY LIFTED. STAY SOULFUL.</h1>
           <p className="text-xl text-ninny-raspberry max-w-lg">Get On the Good Vibes Train – Cannabis That Grooves With Your Soul</p>
-          <a href="https://ninnygoat.co/collections/all" className="retro-button inline-block">
+          <Link to="/shop" className="retro-button inline-block">
             Shop Now
-          </a>
+          </Link>
         </div>
         <div className={`${fadeInClass('home')} transform rotate-6`}>
           <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-xl">
@@ -68,8 +69,7 @@ const Index = () => {
             title="Flower" 
             description="Premium cannabis strains with that vintage quality" 
             iconBg="bg-ninny-marigold" 
-            iconSrc="/lovable-uploads/7c74c706-1102-43a2-bcd2-fe521ab66c26.png" 
-            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=flower"
+            iconSrc="/lovable-uploads/7c74c706-1102-43a2-bcd2-fe521ab66c26.png"
           />
           
           <ProductCard 
@@ -77,7 +77,6 @@ const Index = () => {
             description="Groovy treats that'll take you back to the 70s" 
             iconBg="bg-ninny-water" 
             iconSrc="/lovable-uploads/83c3b308-127f-46bd-9eb6-ef6d0bc17530.png"
-            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=edibles"
           />
           
           <ProductCard 
@@ -85,7 +84,6 @@ const Index = () => {
             description="Modern tech with retro style for easy enjoyment" 
             iconBg="bg-ninny-marigold" 
             iconSrc="/lovable-uploads/a4cce5bd-dbfa-4a79-a948-7f3df095317b.png"
-            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=vaporizers"
           />
           
           <ProductCard 
@@ -93,7 +91,6 @@ const Index = () => {
             description="Powerful extracts with that pure 70s euphoria" 
             iconBg="bg-ninny-raspberry" 
             iconSrc="/lovable-uploads/c41c7e6b-9ba9-4bdd-8a73-09481cf54775.png"
-            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=concentrates"
           />
           
           <ProductCard 
@@ -101,12 +98,11 @@ const Index = () => {
             description="Tools and gear with vintage-inspired designs" 
             iconBg="bg-ninny-mandarin" 
             iconSrc="/lovable-uploads/6eada197-f35a-46b0-aeb3-ddd7b4588e7b.png"
-            link="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=accessories"
           />
         </div>
         
         <div className="text-center">
-          <a href="https://ninnygoat.co/collections/all" className="retro-button">View All Products</a>
+          <Link to="/shop" className="retro-button">View All Products</Link>
         </div>
       </div>
     </section>
@@ -169,9 +165,9 @@ const Index = () => {
             Founded by true cannabis enthusiasts, our dispensary exudes a passion for the plant and a commitment to creating a haven for like-minded individuals who dig the good vibes.
           </p>
           <p className="mb-10">Step into our finely curated store designed for cannabis people, by cannabis people and experience a shopping environment that feels like home!</p>
-          <a href="#shop" className="bg-ninny-mandarin text-ninny-cashmere px-6 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-ninny-marigold transition-colors inline-block">
+          <Link to="/shop" className="bg-ninny-mandarin text-ninny-cashmere px-6 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-ninny-marigold transition-colors inline-block">
             Explore Our Products
-          </a>
+          </Link>
         </div>
         <div className={`${fadeInClass('products-intro')}`}>
           <div className="aspect-[4/3] overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%]">
@@ -195,7 +191,7 @@ const Index = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="/blog" className="retro-button">Show All Blog Posts</a>
+          <Link to="/blog" className="retro-button">Show All Blog Posts</Link>
         </div>
       </div>
     </section>

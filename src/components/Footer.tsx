@@ -31,11 +31,11 @@ const Footer = () => {
           <div className="space-y-2">
             <h4 className="text-ninny-marigold font-funkydori">Shop</h4>
             <nav className="flex flex-col gap-2 text-black">
-              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=flower" className="hover:text-ninny-mandarin transition-colors">Flower</a>
-              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=edibles" className="hover:text-ninny-mandarin transition-colors">Edibles</a>
-              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=vaporizers" className="hover:text-ninny-mandarin transition-colors">Vapes</a>
-              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=concentrates" className="hover:text-ninny-mandarin transition-colors">Concentrates</a>
-              <a href="https://ninnygoat.co/collections/all?dtche%5Bcategory%5D=accessories" className="hover:text-ninny-mandarin transition-colors">Accessories</a>
+              <Link to="/shop" className="hover:text-ninny-mandarin transition-colors">Flower</Link>
+              <Link to="/shop" className="hover:text-ninny-mandarin transition-colors">Edibles</Link>
+              <Link to="/shop" className="hover:text-ninny-mandarin transition-colors">Vapes</Link>
+              <Link to="/shop" className="hover:text-ninny-mandarin transition-colors">Concentrates</Link>
+              <Link to="/shop" className="hover:text-ninny-mandarin transition-colors">Accessories</Link>
             </nav>
           </div>
           
@@ -46,7 +46,7 @@ const Footer = () => {
               <Link to="/" className="hover:text-ninny-mandarin transition-colors">Home</Link>
               <Link to="/about" className="hover:text-ninny-mandarin transition-colors">About</Link>
               <a href="#blog" className="hover:text-ninny-mandarin transition-colors">Blog</a>
-              <a href="https://ninnygoat.co/collections/all" className="hover:text-ninny-mandarin transition-colors">Shop</a>
+              <Link to="/shop" className="hover:text-ninny-mandarin transition-colors">Shop</Link>
               <a href="#contact" className="hover:text-ninny-mandarin transition-colors">Contact</a>
             </nav>
           </div>
