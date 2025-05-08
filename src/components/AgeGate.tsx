@@ -9,9 +9,15 @@ const AgeGate: React.FC = () => {
   useEffect(() => {
     // Check if user has already verified their age in this session
     const verified = sessionStorage.getItem('age-verified');
-    if (verified === 'true') {
+    // Check if this is the initial page load
+    const isInitialPageLoad = !localStorage.getItem('has-visited-site');
+    
+    if (verified === 'true' || !isInitialPageLoad) {
       setHasVerified(true);
     }
+    
+    // Mark that the user has visited the site
+    localStorage.setItem('has-visited-site', 'true');
   }, []);
 
   const handleVerify = () => {
