@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import Shop from "./pages/Shop";
 import NotFound from "./pages/NotFound";
+import AgeGate from "./components/AgeGate";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AgeGate />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
