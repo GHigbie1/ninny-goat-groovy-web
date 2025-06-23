@@ -19,8 +19,7 @@ const Footer = () => {
             />
             <p className="text-sm opacity-80 text-black">
               512 US-5<br />
-              Fairlee, VT 05045<br />
-              (555) 123-4567
+              Fairlee, VT 05045
             </p>
             <p className="text-xs opacity-60 text-black">
               Adult-use cannabis products. For use by adults 21 and older. Keep out of reach of children.
