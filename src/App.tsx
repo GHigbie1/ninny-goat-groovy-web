@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import Shop from "./pages/Shop";
 import COA from "./pages/COA";
+import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 import AgeGate from "./components/AgeGate";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/about" element={<AboutUs />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/coa" element={<COA />} />
+          <Route path="/events" element={<Events />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
