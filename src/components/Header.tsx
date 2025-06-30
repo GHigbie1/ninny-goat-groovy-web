@@ -40,6 +40,7 @@ const Header = () => {
           <Link to="/about" className="nav-link text-[#0F7776] font-poppins font-bold">About</Link>
           <a href="#blog" className="nav-link text-[#0F7776] font-poppins font-bold">Blog</a>
           <Link to="/shop" className="nav-link text-[#0F7776] font-poppins font-bold">Shop</Link>
+          <Link to="/coa" className="nav-link text-[#0F7776] font-poppins font-bold">COA</Link>
           <a href="#contact" className="nav-link text-[#0F7776] font-poppins font-bold">Contact</a>
         </nav>
 
@@ -74,6 +75,7 @@ const Header = () => {
             <Link to="/about" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <a href="#blog" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Blog</a>
             <Link to="/shop" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Shop</Link>
+            <Link to="/coa" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>COA</Link>
             <a href="#contact" className="nav-link text-[#0F7776] font-poppins font-bold" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             <Link to="/shop" className="retro-button text-sm self-start" style={{backgroundColor: '#F8B832'}} onClick={() => setMobileMenuOpen(false)}>Shop Now</Link>
           </nav>
