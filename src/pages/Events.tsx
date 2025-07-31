@@ -8,39 +8,17 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { format, isSameDay } from 'date-fns';
-import { CalendarIcon, Clock, MapPin, Plus } from 'lucide-react';
+import { CalendarIcon, Clock, MapPin, Plus, Trash2 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-interface Event {
-  id: string;
-  title: string;
-  description: string;
-  date: Date;
-  time: string;
-  location: string;
-}
+import { useEvents, useAddEvent, useDeleteEvent } from '@/hooks/useEvents';
+import type { Event } from '@/lib/supabase';
 
 const Events = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
-  const [events, setEvents] = useState<Event[]>([
-    {
-      id: '1',
-      title: 'Cannabis Education Workshop',
-      description: 'Learn about the benefits and proper usage of cannabis products.',
-      date: new Date(2025, 0, 15), // January 15, 2025
-      time: '2:00 PM',
-      location: 'Ninny Goat & Co. Store'
-    },
-    {
-      id: '2',
-      title: 'New Product Launch',
-      description: 'Discover our latest premium flower strains.',
-      date: new Date(2025, 0, 22), // January 22, 2025
-      time: '6:00 PM',
-      location: 'Ninny Goat & Co. Store'
-    }
-  ]);
+  const { data: events = [], isLoading, error } = useEvents();
+  const addEventMutation = useAddEvent();
+  const deleteEventMutation = useDeleteEvent();
   const [isAddEventOpen, setIsAddEventOpen] = useState(false);
   const [newEvent, setNewEvent] = useState({
     title: '',
@@ -50,30 +28,40 @@ const Events = () => {
     location: ''
   });
 
-  const handleAddEvent = () => {
+  const handleAddEvent = async () => {
     if (newEvent.title && newEvent.time && newEvent.location) {
-      const event: Event = {
-        id: Date.now().toString(),
-        title: newEvent.title,
-        description: newEvent.description,
-        date: newEvent.date,
-        time: newEvent.time,
-        location: newEvent.location
-      };
-      setEvents([...events, event]);
-      setNewEvent({
-        title: '',
-        description: '',
-        date: selectedDate || new Date(),
-        time: '',
-        location: ''
-      });
-      setIsAddEventOpen(false);
+      try {
+        await addEventMutation.mutateAsync({
+          title: newEvent.title,
+          description: newEvent.description,
+          date: newEvent.date.toISOString().split('T')[0], // Convert to YYYY-MM-DD format
+          time: newEvent.time,
+          location: newEvent.location
+        });
+        setNewEvent({
+          title: '',
+          description: '',
+          date: selectedDate || new Date(),
+          time: '',
+          location: ''
+        });
+        setIsAddEventOpen(false);
+      } catch (error) {
+        console.error('Failed to add event:', error);
+      }
+    }
+  };
+
+  const handleDeleteEvent = async (eventId: string) => {
+    try {
+      await deleteEventMutation.mutateAsync(eventId);
+    } catch (error) {
+      console.error('Failed to delete event:', error);
     }
   };
 
   const getEventsForDate = (date: Date) => {
-    return events.filter(event => isSameDay(event.date, date));
+    return events.filter(event => isSameDay(new Date(event.date), date));
   };
 
   const getEventsForSelectedDate = () => {
@@ -82,8 +70,38 @@ const Events = () => {
   };
 
   const getEventDates = () => {
-    return events.map(event => event.date);
+    return events.map(event => new Date(event.date));
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-ninny-cashmere">
+        <Header />
+        <main className="max-w-7xl mx-auto px-6 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-ninny-raspberry mb-4">Events</h1>
+            <p className="text-xl text-gray-700">Loading events...</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-ninny-cashmere">
+        <Header />
+        <main className="max-w-7xl mx-auto px-6 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-ninny-raspberry mb-4">Events</h1>
+            <p className="text-xl text-red-600">Error loading events. Please try again later.</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-ninny-cashmere">
@@ -151,8 +169,12 @@ const Events = () => {
                           placeholder="Enter event location"
                         />
                       </div>
-                      <Button onClick={handleAddEvent} className="w-full bg-ninny-marigold hover:bg-ninny-mandarin">
-                        Add Event
+                      <Button 
+                        onClick={handleAddEvent} 
+                        className="w-full bg-ninny-marigold hover:bg-ninny-mandarin"
+                        disabled={addEventMutation.isPending}
+                      >
+                        {addEventMutation.isPending ? 'Adding...' : 'Add Event'}
                       </Button>
                     </div>
                   </DialogContent>
@@ -188,7 +210,18 @@ const Events = () => {
                   {getEventsForSelectedDate().length > 0 ? (
                     getEventsForSelectedDate().map((event) => (
                       <div key={event.id} className="border rounded-lg p-4 bg-white">
-                        <h3 className="font-bold text-lg text-ninny-raspberry mb-2">{event.title}</h3>
+                        <div className="flex justify-between items-start mb-2">
+                          <h3 className="font-bold text-lg text-ninny-raspberry">{event.title}</h3>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => handleDeleteEvent(event.id)}
+                            disabled={deleteEventMutation.isPending}
+                            className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
                         <p className="text-gray-600 mb-3">{event.description}</p>
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-gray-500">
                           <div className="flex items-center">
@@ -221,16 +254,27 @@ const Events = () => {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {events
-                .filter(event => event.date >= new Date())
-                .sort((a, b) => a.date.getTime() - b.date.getTime())
+                .filter(event => new Date(event.date) >= new Date())
+                .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
                 .map((event) => (
                   <div key={event.id} className="border rounded-lg p-4 bg-white">
-                    <h3 className="font-bold text-lg text-ninny-raspberry mb-2">{event.title}</h3>
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="font-bold text-lg text-ninny-raspberry">{event.title}</h3>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleDeleteEvent(event.id)}
+                        disabled={deleteEventMutation.isPending}
+                        className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </Button>
+                    </div>
                     <p className="text-gray-600 mb-3">{event.description}</p>
                     <div className="space-y-1 text-sm text-gray-500">
                       <div className="flex items-center">
                         <CalendarIcon className="w-4 h-4 mr-1" />
-                        {format(event.date, 'MMM d, yyyy')}
+                        {format(new Date(event.date), 'MMM d, yyyy')}
                       </div>
                       <div className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
