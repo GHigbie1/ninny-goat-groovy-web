@@ -1,5 +1,5 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { supabase } from '@/integrations/supabase/client';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 export interface Event {
   id: number;
@@ -11,78 +11,63 @@ export interface Event {
   created_at?: string;
   updated_at?: string;
 }
-import { toast } from 'sonner';
+
+// Mock data for now
+const mockEvents: Event[] = [
+  {
+    id: 1,
+    title: 'Cannabis Education Workshop',
+    description: 'Learn about the different strains and their effects',
+    date: '2025-08-15',
+    time: '14:00',
+    location: 'Ninny Goat Dispensary'
+  },
+  {
+    id: 2,
+    title: 'New Product Launch',
+    description: 'Introducing our latest premium flower collection',
+    date: '2025-08-20',
+    time: '18:00',
+    location: 'Main Store'
+  }
+];
+
+let eventsData = [...mockEvents];
+let nextId = 3;
 
 export const useEvents = () => {
-  return useQuery({
-    queryKey: ['events'],
-    queryFn: async (): Promise<Event[]> => {
-      const { data, error } = await supabase
-        .from('Ninny Goat Event Calendar')
-        .select('*')
-        .order('date', { ascending: true });
-      
-      if (error) {
-        console.error('Error fetching events:', error);
-        throw error;
-      }
-      
-      return data || [];
-    },
-  });
+  const [loading, setLoading] = useState(false);
+  
+  return {
+    data: eventsData,
+    isLoading: loading,
+    error: null
+  };
 };
 
 export const useAddEvent = () => {
-  const queryClient = useQueryClient();
-  
-  return useMutation({
-    mutationFn: async (event: Omit<Event, 'id' | 'created_at' | 'updated_at'>) => {
-      const { data, error } = await supabase
-        .from('Ninny Goat Event Calendar')
-        .insert([event])
-        .select()
-        .single();
-      
-      if (error) {
-        console.error('Error adding event:', error);
-        throw error;
-      }
-      
-      return data;
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['events'] });
+  return {
+    mutateAsync: async (event: Omit<Event, 'id' | 'created_at' | 'updated_at'>) => {
+      const newEvent: Event = {
+        ...event,
+        id: nextId++,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+      eventsData.push(newEvent);
       toast.success('Event added successfully!');
+      return newEvent;
     },
-    onError: (error) => {
-      console.error('Error adding event:', error);
-      toast.error('Failed to add event. Please try again.');
-    },
-  });
+    isPending: false
+  };
 };
 
 export const useDeleteEvent = () => {
-  const queryClient = useQueryClient();
-  
-  return useMutation({
-    mutationFn: async (eventId: number) => {
-      const { error } = await supabase
-        .from('Ninny Goat Event Calendar')
-        .delete()
-        .eq('id', eventId);
-      
-      if (error) {
-        console.error('Error deleting event:', error);
-        throw error;
-      }
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['events'] });
+  return {
+    mutateAsync: async (eventId: number) => {
+      eventsData = eventsData.filter(event => event.id !== eventId);
       toast.success('Event deleted successfully!');
     },
-    onError: (error) => {
-      console.error('Error deleting event:', error);
-      toast.error('Failed to delete event. Please try again.');
-    },
-  });
+    isPending: false
+  };
 };
