@@ -1,5 +1,16 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { supabase, type Event } from '@/lib/supabase';
+import { supabase } from '@/integrations/supabase/client';
+
+export interface Event {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  created_at?: string;
+  updated_at?: string;
+}
 import { toast } from 'sonner';
 
 export const useEvents = () => {
@@ -7,7 +18,7 @@ export const useEvents = () => {
     queryKey: ['events'],
     queryFn: async (): Promise<Event[]> => {
       const { data, error } = await supabase
-        .from('events')
+        .from('Ninny Goat Event Calendar')
         .select('*')
         .order('date', { ascending: true });
       
@@ -27,7 +38,7 @@ export const useAddEvent = () => {
   return useMutation({
     mutationFn: async (event: Omit<Event, 'id' | 'created_at' | 'updated_at'>) => {
       const { data, error } = await supabase
-        .from('events')
+        .from('Ninny Goat Event Calendar')
         .insert([event])
         .select()
         .single();
@@ -54,9 +65,9 @@ export const useDeleteEvent = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: async (eventId: string) => {
+    mutationFn: async (eventId: number) => {
       const { error } = await supabase
-        .from('events')
+        .from('Ninny Goat Event Calendar')
         .delete()
         .eq('id', eventId);
       

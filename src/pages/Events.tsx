@@ -11,8 +11,7 @@ import { format, isSameDay } from 'date-fns';
 import { CalendarIcon, Clock, MapPin, Plus, Trash2 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { useEvents, useAddEvent, useDeleteEvent } from '@/hooks/useEvents';
-import type { Event } from '@/lib/supabase';
+import { useEvents, useAddEvent, useDeleteEvent, type Event } from '@/hooks/useEvents';
 
 const Events = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
@@ -52,7 +51,7 @@ const Events = () => {
     }
   };
 
-  const handleDeleteEvent = async (eventId: string) => {
+  const handleDeleteEvent = async (eventId: number) => {
     try {
       await deleteEventMutation.mutateAsync(eventId);
     } catch (error) {
